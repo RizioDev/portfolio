@@ -1,0 +1,33 @@
+{
+    "home": {
+        "who-im": "Hola, mi nombre es",
+        "about": "Desarrollador Web Full Stack.",
+        "description": "Soy un desarrollador web full stack altamente especializado en la creación de aplicaciones web eficientes y orientadas a la resolución de problemas cotidianos. Actualmente estoy enfocado en el diseño responsivo de aplicaciones web.",
+        "resume": "Descargar Curriculum"
+    },
+    "about": {
+        "about": "Sobre mi",
+        "im": "Hola, soy Fabrizio Alderete, mucho gusto. Te invito a leer un poco sobre mi",
+        "description": "Soy un apasionado y excelente creador de aplicaciones web. Mi enfoque se centra en el desarrollo de soluciones tecnológicas que agilicen el trabajo y mejoren la productividad de los usuarios. Si buscas un desarrollador que pueda brindarte soluciones eficientes y efectivas para tus problemas cotidianos, estoy listo para ayudarte a llevar tu visión al siguiente nivel. Juntos, podemos crear aplicaciones web innovadoras que mejoren tu productividad y simplifiquen tus tareas diarias."
+    },
+    "skills": {
+        "skills": "Hablidades",
+        "description": "// Estas son las tecnologias con las que estuve trabajando"
+    },
+    "work": {
+        "work": "Proyectos",
+        "description": "// Estos son mis ultimos proyectos"
+    },
+    "contact": {
+        "contact": "Contacto",
+        "description": "// Completa y envía el formulario o contactame por mis otras redes",
+        "lets": "Colaboremos juntos"
+    },
+    "navbar": {
+        "home": "Inicio",
+        "about": "Sobre mi",
+        "skills":"Hablidades",
+        "work":"Trabajos",
+        "contact":"Contacto"
+    }
+}

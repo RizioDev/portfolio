@@ -11,35 +11,12 @@ import {
 import { HiOutlineMail } from "react-icons/hi";
 import Logo from "../assets/logo.png";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-
-  const changeLanguage = async (language) => {
-    try {
-      const requestJson = await fetch(`../languages/${language}.json`);
-      const texts = await requestJson.json();
-      console.log(texts);
-    } catch (error) {
-      console.error("Error fetching language data:", error);
-    }
-  };
-
-  const handleClicke = async (event) => {
-    const language = event.target.parentElement.dataset.language;
-    await changeLanguage(language);
-  };
-
-  // const changeLanguage = async (language) => {
-  //   const requestJson = await fetch(`../languages/${language}.json`);
-  //   const texts = await requestJson.json();
-
-  //   console.log(texts);
-  // };
-  // const handleClicke = (event) => {
-  //   changeLanguage(event.target.parentElement.dataset.language);
-  // };
+  const [t, i18n] = useTranslation("global");
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
@@ -49,53 +26,44 @@ const Navbar = () => {
 
       {/* menu */}
       <div className="ml-4 mr-4 sm:ml-10 sm:mr-2 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 items-center">
-        <div data-language="en">
-          {" "}
-          <img
-            src={en}
-            alt="Inglés"
-            className="w-8 h-6"
-            onClick={handleClicke}
-          />
-        </div>
-        <div data-language="es">
-          <img
-            src={es}
-            alt="Español"
-            className="w-8 h-6"
-            onClick={handleClicke}
-          />
-        </div>
+        <button
+          onClick={() => i18n.changeLanguage("en")}
+          className="hover:scale-105 transition-transform"
+        >
+          <img src={en} alt="Inglés" className="w-8 h-6" />
+        </button>
+        <button
+          onClick={() => i18n.changeLanguage("es")}
+          className="hover:scale-105 transition-transform"
+        >
+          <img src={es} alt="Español" className="w-8 h-6" />
+        </button>
       </div>
-      {/* <ul className="md:flex">
-        <li>
-          <img src={es} alt="Bandera de España" className="w-[1rem] " />
-        </li>
-      </ul> */}
+
       <ul className="hidden md:flex">
         <li>
           <Link to="home" smooth={true} duration={500}>
-            Home
+            {t("navbar.home")}
           </Link>
         </li>
         <li>
           <Link to="about" smooth={true} duration={500}>
-            About
+            {t("navbar.about")}
           </Link>
         </li>
         <li>
           <Link to="skills" smooth={true} duration={500}>
-            Skills
+            {t("navbar.skills")}
           </Link>
         </li>
         <li>
           <Link to="work" smooth={true} duration={500}>
-            Work
+            {t("navbar.work")}
           </Link>
         </li>
         <li>
           <Link to="contact" smooth={true} duration={500}>
-            Contact
+            {t("navbar.contact")}
           </Link>
         </li>
       </ul>
