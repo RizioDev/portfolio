@@ -29,5 +29,10 @@
         "skills":"Hablidades",
         "work":"Trabajos",
         "contact":"Contacto"
+    },
+    "form": {
+        "ok": "¡Enviado correctamente!",
+        "soon": "Me pondre en contacto contigo a la brevedad :)",
+        "close": "Cerrar"
     }
 }

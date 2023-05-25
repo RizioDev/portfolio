@@ -19,9 +19,11 @@ const Home = () => {
           {t("home.description")}
         </p>
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
-            {t("home.resume")}
-          </button>
+          <a href="https://drive.google.com/uc?export=download&id=1bQGsfiq95Rztssh-_WklZC_rsAedcuii">
+            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
+              {t("home.resume")}
+            </button>
+          </a>
         </div>
       </div>
     </div>

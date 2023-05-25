@@ -29,5 +29,10 @@
         "skills":"Skills",
         "work":"Work",
         "contact":"Contact"
+    },
+    "form": {
+        "ok": "¡Sent successfully!",
+        "soon": "I will get in touch with you soon :)",
+        "close": "Close"
     }
 }
